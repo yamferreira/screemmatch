@@ -1,0 +1,40 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+
+#chave OpenIa
+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
+
+#chave Google Gemini
+AIzaSyAH9v_q1M1uSMzZxDmiiqCJDcg8Y-2LUhU
