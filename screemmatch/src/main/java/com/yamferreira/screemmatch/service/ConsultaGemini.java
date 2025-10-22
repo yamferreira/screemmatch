@@ -4,7 +4,7 @@ import com.google.genai.Client;
 import com.google.genai.types.GenerateContentResponse;
 
 public class ConsultaGemini {
-    private static final String CHAVE = "AIzaSyAH9v_q1M1uSMzZxDmiiqCJDcg8Y-2LUhU";
+    private static final String CHAVE = System.getenv("GEMINI_APIKEY");
     public static String obterTraducao(String texto) {
         Client client = Client.builder().apiKey(CHAVE).build();
 
