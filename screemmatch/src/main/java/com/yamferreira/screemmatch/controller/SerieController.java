@@ -1,6 +1,8 @@
 package com.yamferreira.screemmatch.controller;
 
+import com.yamferreira.screemmatch.dto.EpisodioDTO;
 import com.yamferreira.screemmatch.dto.SerieDTO;
+import com.yamferreira.screemmatch.model.Categoria;
 import com.yamferreira.screemmatch.model.Serie;
 import com.yamferreira.screemmatch.service.SerieService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +38,25 @@ public class SerieController {
     @GetMapping("/{id}")
     public SerieDTO obterPorId(@PathVariable Long id) {
         return serieService.obterPorId(id);
+    }
+
+    @GetMapping("/{id}/temporadas/todas")
+    public List<EpisodioDTO> obterTodasTemporadas(@PathVariable Long id) {
+        return serieService.obterTodasTemporadas(id);
+    }
+
+    @GetMapping("/{id}/temporadas/{numero}")
+    public List<EpisodioDTO> obterTemporada(@PathVariable Long id, @PathVariable Long numero) {
+        return serieService.obterTemporada(id, numero);
+    }
+
+    @GetMapping("categoria/{nomeGenero}")
+    public List<SerieDTO> obterCategoria(@PathVariable String nomeGenero) {
+        return serieService.obterCategoria(nomeGenero);
+    }
+
+    @GetMapping("{id}/temporadas/top")
+    public List<EpisodioDTO> obterTop5(@PathVariable Long id) {
+        return serieService.obterTop5(id);
     }
 }
